@@ -55,7 +55,7 @@ const amortizarHipoteca = async(req:Request<{id:string, cantidad:number}>, res:R
           oreturn;
         }
 
-        await ClienteModel.findByIdAndUpdate(cliente.id, {dinero: dineroClienteActualizado {new: true, runVolidators:true}).exec();
+        await ClienteModel.findByIdAndUpdate(cliente.id, {dinero: dineroClienteActualizado}, {new: true, runVolidators:true}).exec();
         await HipotecaModel.findByIdAndUpdate(id, {dcompletado: amortizadoActualizado, cuotas: cuotaActualizada}, {new: true, runValidators:true}).exec();
 
         console.log("he completado esta cantidad y esta es mi dinero ahora mismo", dineroClienteActualizado
