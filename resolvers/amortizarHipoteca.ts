@@ -49,7 +49,7 @@ const amortizarHipoteca = async(req:Request<{id:string, cantidad:number}>, res:R
         const cuotaActualizada:number = cuotas - 1;
 
         if(cuotaActualizada <= 0){
-            await ClienteModel.findByIdAndUpdate(cliente.id, {dinero: dineroClienteActualizado {new: true, runVolidators:true}).exec();
+            await ClienteModel.findByIdAndUpdate(cliente.id, {dinero: dineroClienteActualizado}, {new: true, runVolidators:true}).exec();
             await HipotecaModel.findByIdAndDelete(id).exec();
             res.status(200).send("Hipoteca completamente amortizada, dcompletado actualizado: " + amortizadoActualizado + ", dinero cliente actualizada: " + carteraClienteActualdinero "");
           oreturn;
