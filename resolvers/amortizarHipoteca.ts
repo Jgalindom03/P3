@@ -5,7 +5,7 @@ import { getHipotecaFromModel } from "../controllers/getHipotecaFromModel.ts";
 import { getClienteFromModel } from "../controllers/getClienteFromModel.ts";
 
 const amortizarHipoteca = async(req:Request<{id:string, cantidad:number}>, res:Response<string | {error:unknown}>) => {
-    try{
+    /*try{
         const{id, cantidad} = req.body;
 
         if(!id || !cantidad){
@@ -64,7 +64,7 @@ const amortizarHipoteca = async(req:Request<{id:string, cantidad:number}>, res:R
     }catch(error){
         res.status(500).send(error.message);
         return;
-    }
+    }*/
 }
 
 export default amortizarHipoteca;
