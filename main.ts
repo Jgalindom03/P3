@@ -20,7 +20,7 @@ const MONGO_URL = env.MONGO_URL || Deno.env.get("MONGO_URL");
 
 if(!MONGO_URL){
   console.log("No se ha encontrado la variable de entorno MONGO_URL");
-  Deno.exit(1);
+  throw new Error("No se ha encontrado la variable de entorno MONGO_URL");
 }
 
 await mongoose.connect(MONGO_URL);
