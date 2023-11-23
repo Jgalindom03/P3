@@ -37,6 +37,6 @@ app.put("/api/ingresarDinero", ingresarDinero);
 app.post("/api/gestor", postGestor); 
 app.put("/api/asignarGestor", asignarGestor); 
 app.post("/api/hipoteca", postHipoteca); 
-app.put("/api/amortizarHipoteca", amortizarHipoteca); 
+//app.put("/api/amortizarHipoteca", amortizarHipoteca); 
 
 app.listen(3000);
