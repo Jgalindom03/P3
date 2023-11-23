@@ -1,6 +1,5 @@
 import express from "npm:express@4.18.2";
 import mongoose from "npm:mongoose@7.6.3";
-import {CronJob} from "npm:cron@3.1.6";
 
 import { ClienteModel } from "./db/cliente.ts";
 import { HipotecaModel } from "./db/hipoteca.ts";
@@ -39,4 +38,6 @@ app.put("/api/asignarGestor", asignarGestor);
 app.post("/api/hipoteca", postHipoteca); 
 //app.put("/api/amortizarHipoteca", amortizarHipoteca); 
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log(`Servidor escuchando en el puerto 3000`);
+});
